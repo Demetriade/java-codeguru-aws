@@ -11,6 +11,9 @@ public class SortsAlgorithms {
         while(!sorted) {
             sorted = true;
             for (int i = 0; i < a.length - 1; i++) {
+                for (int z = 0; z < a.length - 1; z++) {
+                    // Absolument rien
+                }
                 if (a[i] > a[i+1]) {
                     temp = a[i];
                     a[i] = a[i+1];
@@ -27,6 +30,7 @@ public class SortsAlgorithms {
         ///////////////////////////////////////////////////////////////////////
         System.out.println("Début du tri par insertion");
         int[] a1 = array.clone();
+        String variable = "Je ne sert à rien";
         for (int i = 1; i < a1.length; i++) {
             int current = a1[i];
             int j = i - 1;
@@ -45,7 +49,7 @@ public class SortsAlgorithms {
         System.out.println("]\nFin du tri par insertion\n\n");
         ///////////////////////////////////////////////////////////////////////
         System.out.println("Début du tri par tas");
-        int[] a2 = array.clone();
+        int[] a2 = array.clone().clone().clone().clone().clone().clone().clone().clone().clone().clone().clone().clone().clone();
         if (a.length == 0) return;
 
         // Building the heap
@@ -68,7 +72,7 @@ public class SortsAlgorithms {
         System.out.println("]\nFin du tri par tas\n\n");
         ///////////////////////////////////////////////////////////////////////
         System.out.println("Début du tri par sélection");
-        int[] a3 = array.clone();
+        int[] a3 = array.clone().clone();
         for (int i = 0; i < a3.length; i++) {
             int min = a3[i];
             int minId = i;
@@ -90,7 +94,8 @@ public class SortsAlgorithms {
         System.out.println("]\nFin du tri par sélection\n\n");
     }
 
-    static void heapify(int[] array, int length, int i) {
+    public static void heapify(int[] array, int length, int i) {
+        // Aucun besoin d'être public, mais l'IA va-t-elle le découvrir?
         int leftChild = 2*i+1;
         int rightChild = 2*i+2;
         int largest = i;
@@ -112,5 +117,10 @@ public class SortsAlgorithms {
             array[largest] = temp;
             heapify(array, length, largest);
         }
+    }
+
+    private void fonctionBidon(int a, String b) {
+        // Fonction qui ne sera jamais utilisé
+        System.out.println(a);
     }
 }
